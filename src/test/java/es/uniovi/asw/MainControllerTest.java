@@ -29,9 +29,6 @@ public class MainControllerTest {
 
   private MockMvc mvc;
 
-  @Value("${local.server.port}")
-  private int port;
-
   @Before
   public void setUp() throws Exception {
     mvc = MockMvcBuilders.webAppContextSetup(context).build();
