@@ -1,4 +1,4 @@
-package es.uniovi.asw.selenium;
+package es.uniovi.asw;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -27,8 +27,14 @@ public class MyTest {
     driver.get(baseUrl + "/");
     driver.findElement(By.id("cabecera_keywords")).clear();
     driver.findElement(By.id("cabecera_keywords")).sendKeys("rector");
-    driver.getPageSource().contains("Kiko");
-//    driver.findElement(By.linkText("English")).click();
+    driver.findElement(By.id("cabecera_keywords")).clear();
+    driver.findElement(By.id("cabecera_keywords")).sendKeys("rector");
+    driver.findElement(By.id("cabecera_search")).click();
+    try {
+      assertEquals("Rector", driver.findElement(By.cssSelector("li.alt > div.resultado_contenido > span.titulo > span.highlight")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
   }
 
   @After
