@@ -27,7 +27,7 @@ public class MyTest {
     driver.get(baseUrl + "/");
     driver.findElement(By.id("cabecera_keywords")).clear();
     driver.findElement(By.id("cabecera_keywords")).sendKeys("rector");
-    driver.getPageSource().contains("Oficina");
+    driver.getPageSource().contains("Kiko");
 //    driver.findElement(By.linkText("English")).click();
   }
 
