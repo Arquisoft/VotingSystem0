@@ -27,8 +27,6 @@ public class UnioviTest {
     driver.get(baseUrl + "/");
     driver.findElement(By.id("cabecera_keywords")).clear();
     driver.findElement(By.id("cabecera_keywords")).sendKeys("rector");
-    driver.findElement(By.id("cabecera_keywords")).clear();
-    driver.findElement(By.id("cabecera_keywords")).sendKeys("rector");
     driver.findElement(By.id("cabecera_search")).click();
     try {
       assertEquals("Rector", driver.findElement(By.cssSelector("li.alt > div.resultado_contenido > span.titulo > span.highlight")).getText());
