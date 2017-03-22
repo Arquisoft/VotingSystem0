@@ -20,7 +20,7 @@ public class UnioviTest {
   public void setUp() throws Exception {
     driver = new HtmlUnitDriver();
     baseUrl = "http://www.uniovi.es/";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
   }
 
   @Test
