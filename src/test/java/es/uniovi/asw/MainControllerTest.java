@@ -39,4 +39,8 @@ public class MainControllerTest {
     mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(containsString("Voting")));
   }
 
+  @Test
+  public void testSort() throws Exception {
+    mvc.perform(get("/sort")).andExpect(status().isOk()).andExpect(content().string(containsString("Sort")));
+  }
 }

@@ -5,7 +5,7 @@ Scenario: Login
     Given a list of users:
       | name    | password |
       | pepe    | pepe12   |
-      | luis    | siul     |
+      | luis    | siuldfdfdf     |
       | mari    | mmm      |
     When I login with name "luis" and password "siul"
     Then I receive a welcome message
