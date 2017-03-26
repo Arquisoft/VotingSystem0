@@ -36,11 +36,16 @@ public class MainControllerTest {
 
   @Test
   public void testLanding() throws Exception {
-    mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(containsString("Voting")));
+    mvc.perform(get("/")).andExpect(status().isOk()).andExpect(content().string(containsString("Home")));
   }
 
   @Test
   public void testSort() throws Exception {
-    mvc.perform(get("/sort")).andExpect(status().isOk()).andExpect(content().string(containsString("Sort")));
+    mvc.perform(get("/sort")).andExpect(status().isOk()).andExpect(content().string(containsString("sorted")));
+  }
+
+  @Test
+  public void testSearchOK() throws Exception {
+    mvc.perform(get("/search?name=pepe")).andExpect(status().isOk()).andExpect(content().string(containsString("pepe")));
   }
 }
